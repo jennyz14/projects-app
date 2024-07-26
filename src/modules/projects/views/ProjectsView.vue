@@ -21,10 +21,13 @@
     </table>
   </div>
 
+  <input-modal />
+
   <fab-button> <add-circle /> </fab-button>
 </template>
 
 <script setup lang="ts">
 import FabButton from '@/modules/common/components/FabButton.vue';
+import InputModal from '@/modules/common/components/InputModal.vue';
 import AddCircle from '@/modules/common/icons/AddCircle.vue';
 </script>
