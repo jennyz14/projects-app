@@ -19,7 +19,7 @@ import { useLocalStorage } from '@vueuse/core';
   ];
 }; */
 
-export const useProectsStore = defineStore('projects', () => {
+export const useProjectsStore = defineStore('projects', () => {
   const projects = ref(useLocalStorage<Project[]>('projects', []));
 
   const addProject = (name: string) => {

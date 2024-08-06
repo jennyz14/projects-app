@@ -35,7 +35,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useProectsStore } from '../store/projects.store';
+import { useProjectsStore } from '../store/projects.store';
 
-const projectsStore = useProectsStore();
+const projectsStore = useProjectsStore();
 </script>
