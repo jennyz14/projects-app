@@ -38,6 +38,7 @@ export const useProectsStore = defineStore('projects', () => {
 
     // Getters
     projectList: computed(() => [...projects.value]),
+    noProjects: computed(() => projects.value.length === 0),
 
     //Actions
     addProject,
