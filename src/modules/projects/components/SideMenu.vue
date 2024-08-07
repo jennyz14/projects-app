@@ -8,20 +8,18 @@
       <li v-for="project in projectsStore.projectList" :key="project.id">
         <template v-if="project.tasks.length > 0">
           <details>
-            <li v-for="task in project.tasks" :key="task.id">
-              <summary>
+            <summary>
+              <router-link :to="`/project/${project.id}`">
+                {{ project.name }}
+              </router-link>
+            </summary>
+            <ul>
+              <li v-for="task in project.tasks" :key="task.id">
                 <router-link :to="`/project/${project.id}`">
-                  {{ project.name }}
+                  {{ task.name }}
                 </router-link>
-              </summary>
-              <ul>
-                <li v-for="task in project.tasks" :key="task.id">
-                  <router-link :to="`/project/${project.id}`">
-                    {{ task.name }}
-                  </router-link>
-                </li>
-              </ul>
-            </li>
+              </li>
+            </ul>
           </details>
         </template>
         <template v-else>
